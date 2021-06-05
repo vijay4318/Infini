@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google fonts link-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS and js Links-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <!--OWL JS FOR ANIMATION(animate.css)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!--Swiper js-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>About US</title>
+
+    <style>
+         :root{
+        --green: #7ad03a;
+        --red: #a00;
+        --orange: #ffba00;
+        --blue: #2ea2cc;
+        --primary: #a46497;
+        --primary-text: white;
+        --secondary: #ebe9eb;
+        --secondary-text: #515151;
+        --highlight: #77a464;
+        --highligh-text: white;
+        --content-bg: #fff;
+        --subtext: #767676;
+        --primary-font: 'Poppins', sans-serif;
+        --body-text:#3B3663;
+     }
+
+     /*ABOUT US INTRO SECTION*/
+     .abt-intro-content{
+         position: relative;
+         padding-top: 50px;
+     }
+     .abt-intro-content h3, .abt-intro-content span,.whyus-content p{
+        font-family: var(--primary-font);
+         color: var(--body-text);
+       }
+       .what-wedo-heading h3,  .abt-intro-content h3{
+            font-size: 32px;
+            font-weight: 600;
+            padding-top: 8px;
+       }
+       .what-wedo-heading span, .abt-intro-content span{
+           font-weight: 400;
+           font-size: 18px;
+           line-height: 24px;
+       }
+       .whyus-content p{
+           font-weight: 400;
+           font-size: 18px;
+           line-height: 28px; 
+       }
+       .intro-subcontent p{
+           font-family: var(--primary-font);
+           font-weight: 400;
+           font-size: 20px;
+           line-height: 30px;
+           color: #696687;
+       }
+       .abt-ourservice-btn{
+           padding-top: 30px;
+           position: relative;
+       }
+       .our-service-btn{
+        background-image: linear-gradient(96deg, #6254e7 0%, #9289f1 100%);
+           border-radius: 8px;
+           color: white;
+           padding: 10px 25px;
+           font-family: var(--primary-font);
+           font-weight: 600;
+           font-size: 16px;
+           transition: 0.5s ease-in;
+       }
+       .our-service-btn:hover{
+           color: white;
+           background-image: linear-gradient(96deg, #9289f1 0%, #6254e7 100%);
+       }
+
+       /****************WHAT WE DO*******************/
+       .what-wedo-heading h3, .what-wedo-heading span{
+        font-family: var(--primary-font);
+         color: var(--body-text);
+       }
+
+            /*PRGRESS BAR*/
+        .wrapper {
+        overflow: hidden;
+        padding: 20px;
+        width:100%;
+        }
+        .data-one,
+        .data-two,
+        .data-three {
+        
+        display: inline;
+        }
+
+        .circliful {
+            position: relative; 
+        }
+        .circles .content{
+        display:flex;
+        
+        }
+        .circle-text, .circle-info, .circle-text-half, .circle-info-half {
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .circle-info {
+            color: #999;
+        }
+
+        .circliful .fa {
+            margin: -10px 3px 0 3px;
+            position: relative;
+            bottom: 4px;
+        }
+        .content h2, .content p{
+        flex-direction:column;
+        
+        }
+
+        .wrapper ul{
+        display:flex;
+        flex-direction:column
+        }
+
+        .content .sub{
+            padding: 20px 20px;
+            
+        }
+
+        /**WHY US SECTION****/
+        .benefits-whyus .benefits1{
+            display: flex;
+            position: relative;
+        }
+        .benefits1 .marker img{
+            height: 20px;
+            width: 20px;
+        }
+        .why-infini-content span, .why-infini-content h3,.benefits1 .content h3, .benefits1 .content p{
+            font-family: var(--primary-font);
+        }
+       .why-infini-content span{
+           
+           font-weight: 700;
+           font-size: 14px;
+           line-height: 30px;
+           color: var(--body-text);
+       }
+       .why-infini-content h2{
+            font-size: 30px;
+            font-weight: 600;
+            width: 40%;
+            color: var(--body-text);
+       }
+       .benefits1 .content{
+           padding-left: 20px;
+       }
+       .benefits1 .content h3{
+        font-size: 20px;
+            font-weight: 600;
+            color: var(--body-text);
+       }
+       .benefits1 .content p{
+           font-size: 16px;
+           color: #696687;
+       }
+
+       /*TESTIMONIAL*/
+       .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-container {
+        width: 75% !important;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      .swiper-slide {
+padding: 30px 40px;
+}
+
+.swiper-slide{
+width: 40% !important;
+background: #e8e6e661;
+border-radius: 15px;
+}
+/* .swiper-slide-prev{
+    opacity: 0.7;
+transition: blur(2px);
+filter: blur(4px);
+} */
+.swiper-slide img{
+border-radius: 60%;
+}
+
+/*TIMELINE*/
+.timeline{
+    padding-top: 30px;
+}
+ 
+.timeline-intro h3, .timeline-intro span,.timeline-intro p{
+        font-family: var(--primary-font);
+         color: var(--body-text);
+       }
+       .timeline-intro h3 {
+            font-size: 32px;
+            font-weight: 600;
+            padding-top: 8px;
+       }
+       .timeline-intro span{
+           font-weight: 400;
+           font-size: 18px;
+           line-height: 24px;
+       }
+       .timeline-intro p{
+           font-weight: 400;
+           font-size: 18px;
+           line-height: 28px; 
+       }
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: rgb(3, 9, 102);
+}
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 20px;
+  background: rgb(240, 240, 240);
+  box-shadow: 4px 13px 30px 1px rgba(245, 245, 245, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.timeline ul li div time {
+  position: absolute;
+  background: #eaeaeb;
+  width: 80px;
+  height: 30px;
+  top: -15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  border: 1px solid black;
+}
+.timeline ul li div div {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timeline ul li div div p {
+  text-align: center;
+}
+.timeline ul li div .discovery {
+  margin-right: 10px;
+}
+.timeline ul li:nth-of-type(odd) > div {
+  left: 45px;
+  border-left: 3px solid #0a0a92;
+}
+.timeline ul li:nth-of-type(even) > div {
+  left: -439px;
+  border-right: 3px solid #7d00c5;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.timeline ul li:nth-of-type(odd) div {
+  transform: translate3d(100px, -10px, 0) rotate(10deg);
+ 
+}
+.timeline ul li:nth-of-type(even) div {
+  transform: translate3d(-100px, -10px, 0) rotate(10deg);
+  
+}
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+    flex-direction: column;
+  }
+  .timeline ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: -289px;
+  }
+}
+/*******MOBILE OPTIMIZATION**************/
+@media screen and (max-width:764px){
+    .circles .content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+  .circles .content .circliful{
+    width: 157px;
+    justify-content: center;
+    left: 18%;
+    text-align: center;
+  }  
+
+  .abt-intro-image img, .data-image img{
+      width: 100%;
+      height: 100%;
+  }
+
+  /*WHY US*/
+
+.why-infini-image > img:nth-child(1) {
+  height: 100%;
+  width: 100%;
+}
+
+.why-infini > div:nth-child(1) > div:nth-child(1) {
+  flex-direction: column-reverse;
+}
+
+.why-infini-content > h2:nth-child(2) {
+  width: 100%;
+  text-align: center;
+}
+
+.why-infini-content > span:nth-child(1) {
+  text-align: center;
+  position: relative;
+  display: flex;
+  left: 34%;
+}
+
+.why-infini-content {
+  padding-top: 30px;
+}
+
+.benefits-whyus .benefits1 {
+  flex-direction: column;
+}
+
+.benefits1 .content {
+  padding-left: 0px;
+  padding-top: 8px;
+}
+
+.benefits1:nth-child(1) > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*TIMELINE*/
+
+.timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
+/*TESTIMONIAL*/
+.swiper-container {
+    width: 75% !important;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      .swiper-slide {
+padding: 30px 40px;
+}
+
+.swiper-slide{
+width: 100% !important;
+background: #e8e6e661;
+border-radius: 15px;
+}
+
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section class="about-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm col-md pt-5">
+                    <div class="abt-intro-content">
+                        <span>About US</span>
+                        <h3>Boosts Your Website Traffic!</h3>
+                        <div class="intro-subcontent">
+                            <p class="first-paragraph">
+                                Ad nec unum copiosae. Sea ex everti labores, ad option iuvaret qui muva.
+                            </p>
+                            <p class="second-paragraph">
+                                Ea pro tibique comprehensam, sed ea verear numquam molestie. Nam te omittam comprehensam. Ne nam nonumy putent fuisset, reque fabulas usu ne. Ex vel populo appellantur. Eos ne delenit admodum.
+                            </p>
+                        </div>
+                        <div class="abt-ourservice-btn">
+                            <a href="#" class="btn our-service-btn">Our Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm col-md">
+                    <div class="abt-intro-image">
+                        <img src="images/about_new.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="what-we-do">
+        <div class="container">
+            <div class="row">
+               <div class="col-sm col-md what-wedo-heading text-center">
+                   <span>
+                    What we do
+                    </span>
+                    <h3 class="pt-3"> Fresh Ideas for Every Business</h3>
+               </div>
+            </div>
+            <div class="row our-data pt-5" >
+                <div class="col-sm col-md">
+                    <div class="data-image">
+                        <img src="images/about_us_img_01.png" alt="">
+                    </div>
+                </div>
+                <div class="col-sm col-md">
+                    <div class="wrapper">
+                        <ul class="circles">
+                          <div class="content">
+                          <li class="data-one" data-dimension="157" data-text="88%"  data-width="5" data-fontsize="38" data-percent="88" data-fgcolor="#aff199" data-bgcolor="#eee">
+                            
+                          </li>
+                          <div class="sub">
+                          <h2>Creative Approach</h2>
+                            <p>Ea pro tibique comprehensam, sed ea verear numquam molestie. Nam te omittam comprehensam.</p>
+                          </div>
+                          </div>
+                          <div class="content">
+                          <li class="data-two" data-dimension="157" data-text="92%"  data-width="5" data-fontsize="38" data-percent="92" data-fgcolor="#45fdaf" data-bgcolor="#eee"></li><div class="sub">
+                          <h2>Guaranteed Success</h2>
+                            <p>Ea pro tibique comprehensam, sed ea verear numquam molestie. Nam te omittam comprehensam.</p>
+                          </div>
+                          </div>
+                          <div class="content">
+                          <li class="data-three" data-dimension="157" data-text="98%"  data-width="5" data-fontsize="38" data-percent="98" data-fgcolor="#32c3e0" data-bgcolor="#eee"></li><div class="sub">
+                          <h2>SEO Optimization</h2>
+                            <p>Ea pro tibique comprehensam, sed ea verear numquam molestie. Nam te omittam comprehensam.</p>
+                          </div>
+                          
+                          </div>
+                          </ul>
+                          
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-infini pt-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-sm col-md">
+                    <div class="why-infini-content">
+                        <span>
+                            Why Choose us
+                        </span>
+                        <h2>Save Time & Effort With the Ewebot </h2>
+                        <div class="benefits-whyus pt-4">
+                            <div class="benefits1">
+                                <div class="marker">
+                                    <img src="images/chek_b.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3>First Working Process</h3>
+                                    <p>For startups and growing businesses, an online specialist can develop a digital marketing plan to help you grow. </p>
+                                </div>
+                            </div>
+                            <div class="benefits1">
+                                <div class="marker">
+                                    <img src="images/chek_o.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3>Dedicated Team Member</h3>
+                                    <p>Your digital consultant will also be able to kickstart campaigns and maximise your marketing budget.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits1">
+                                <div class="marker">
+                                    <img src="images/chek_g.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3>24/7 Hours Support</h3>
+                                    <p>Lorem ipsum dolor sit amet, vix an natum labitur eleif, mel amet laoreet prois menandri.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="abt-ourservice-btn">
+                            <a href="#" class="btn our-service-btn">Our Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm col-md">
+                    <div class="why-infini-image">
+                        <img src="images/home_img-03.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="timeline pt-5">
+        <div class="container">
+            <div class="timeline-intro text-center">
+                <span>
+                    our Story
+                </span>
+                <h3>The Story of Infini</h3>
+                <p>Ne summo dictas pertinacia nam. Illum cetero vocent ei vim, case regione signiferumque vim te.
+                </p>
+            </div>
+        <ul>
+          <li>
+            <div>
+              <time>1687</time>
+              <div class="discovery">
+                <h1>Discovery</h1>
+                <p>
+                  Laws of motion
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>1827</time>
+              <div class="discovery">
+                <h1>Discovery</h1>
+                <p>
+                  Law of Electric Resistance
+                </p>
+              </div>            
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>1867</time>
+              <div class="discovery">
+                <h1>Discovery</h1>
+                <p>
+                  Dynamite
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>1897</time>
+              <div class="discovery">
+                <h1>Discovery</h1>
+                <p>
+                  Electron
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>1900</time>
+              <div class="discovery">
+                <h1>Discovery</h1>
+                <p>
+                  Quantum Theory
+                </p>
+              </div>
+             
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>1905</time>
+              <div class="discovery">
+                <h1>Discovery</h1>
+                <p>
+                  Photo electric effect
+                </p>
+              </div>
+              
+            </div>
+          </li>
+        </ul>           
+    </div>
+      </section>
+    <section class="aboutus-testimonial pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm col-md text-center">
+                    <h2>Testimonials</h2>
+                </div>
+            </div>
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="infini-review">
+                    <img src="images/girl.jpg" alt="">
+                    <div class="designation">
+                        <h3>Santhosh R</h3>
+                        <span>HR, OCOCO institute</span>
+                    </div>
+                    <div class="review-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, veniam iste. Atque tempore cum optio?</p>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="infini-review">
+                    <img src="images/girl.jpg" alt="">
+                    <div class="designation">
+                        <h3>Santhosh R</h3>
+                        <span>HR, OCOCO institute</span>
+                    </div>
+                    <div class="review-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, veniam iste. Atque tempore cum optio?</p>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="infini-review">
+                    <img src="images/girl.jpg" alt="">
+                    <div class="designation">
+                        <h3>Santhosh R</h3>
+                        <span>HR, OCOCO institute</span>
+                    </div>
+                    <div class="review-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, veniam iste. Atque tempore cum optio?</p>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="infini-review">
+                    <img src="images/girl.jpg" alt="">
+                    <div class="designation">
+                        <h3>Santhosh R</h3>
+                        <span>HR, OCOCO institute</span>
+                    </div>
+                    <div class="review-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, veniam iste. Atque tempore cum optio?</p>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="infini-review">
+                    <img src="images/girl.jpg" alt="">
+                    <div class="designation">
+                        <h3>Santhosh R</h3>
+                        <span>HR, OCOCO institute</span>
+                    </div>
+                    <div class="review-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, veniam iste. Atque tempore cum optio?</p>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="infini-review">
+                    <img src="images/girl.jpg" alt="">
+                    <div class="designation">
+                        <h3>Santhosh R</h3>
+                        <span>HR, OCOCO institute</span>
+                    </div>
+                    <div class="review-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, veniam iste. Atque tempore cum optio?</p>
+                    </div>
+                </div>
+              </div>
+             
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+    </section>
+   
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--Jquery-->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    /*progress bar*/
+    $( document ).ready(function() {
+     $('.data-one').circliful();
+		$('.data-two').circliful();
+		$('.data-three').circliful();
+    });
+
+(function ($) {
+
+    $.fn.circliful = function (options, callback) {
+
+        var settings = $.extend({
+            // These are the defaults.
+            startdegree: 0,
+            fgcolor: "#556b2f",
+            bgcolor: "#eee",
+            fill: false,
+            width: 15,
+            dimension: 200,
+            fontsize: 15,
+            percent: 50,
+            animationstep: 1.0,
+            iconsize: '20px',
+            iconcolor: '#999',
+            border: 'default',
+            complete: null,
+            bordersize: 10
+        }, options);
+
+        return this.each(function () {
+
+            var customSettings = ["fgcolor", "bgcolor", "fill", "width", "dimension", "fontsize", "animationstep", "endPercent", "icon", "iconcolor", "iconsize", "border", "startdegree", "bordersize"];
+
+            var customSettingsObj = {};
+            var icon = '';
+            var percent;
+            var endPercent = 0;
+            var obj = $(this);
+            var fill = false;
+            var text, info;
+
+            obj.addClass('circliful');
+
+            checkDataAttributes(obj);
+
+            if (obj.data('text') != undefined) {
+                text = obj.data('text');
+
+                if (obj.data('icon') != undefined) {
+                    icon = $('<i></i>')
+                        .addClass('fa ' + $(this).data('icon'))
+                        .css({
+                            'color': customSettingsObj.iconcolor,
+                            'font-size': customSettingsObj.iconsize
+                        });
+                }
+
+                if (obj.data('type') != undefined) {
+                    type = $(this).data('type');
+
+                    if (type == 'half') {
+                        addCircleText(obj, 'circle-text-half', (customSettingsObj.dimension / 1.45));
+                    } else {
+                        addCircleText(obj, 'circle-text', customSettingsObj.dimension);
+                    }
+                } else {
+                    addCircleText(obj, 'circle-text', customSettingsObj.dimension);
+                }
+            }
+
+            if ($(this).data("total") != undefined && $(this).data("part") != undefined) {
+                var total = $(this).data("total") / 100;
+
+                percent = (($(this).data("part") / total) / 100).toFixed(3);
+                endPercent = ($(this).data("part") / total).toFixed(3);
+            } else {
+                if ($(this).data("percent") != undefined) {
+                    percent = $(this).data("percent") / 100;
+                    endPercent = $(this).data("percent");
+                } else {
+                    percent = settings.percent / 100;
+                }
+            }
+
+            if ($(this).data('info') != undefined) {
+                info = $(this).data('info');
+
+                if ($(this).data('type') != undefined) {
+                    type = $(this).data('type');
+
+                    if (type == 'half') {
+                        addInfoText(obj, 0.9);
+                    } else {
+                        addInfoText(obj, 1.25);
+                    }
+                } else {
+                    addInfoText(obj, 1.25);
+                }
+            }
+
+            $(this).width(customSettingsObj.dimension + 'px');
+
+            var size = customSettingsObj.dimension,
+                canvas = $('<canvas></canvas>').attr({
+                    width: size,
+                    height: size
+                }).appendTo($(this)).get(0);
+
+            var context = canvas.getContext('2d');
+
+            var dpr = window.devicePixelRatio;
+            if ( dpr ) {
+                var $canvas = $(canvas);
+                $canvas.css('width', size);
+                $canvas.css('height', size);
+                $canvas.attr('width', size * dpr);
+                $canvas.attr('height', size * dpr);
+
+                context.scale(dpr, dpr);
+            }
+
+            var container = $(canvas).parent();
+            var x = size / 2;
+            var y = size / 2;
+            var degrees = customSettingsObj.percent * 360.0;
+            var radians = degrees * (Math.PI / 180);
+            var radius = size / 2.5;
+            var startAngle = 2.3 * Math.PI;
+            var endAngle = 0;
+            var counterClockwise = false;
+            var curPerc = customSettingsObj.animationstep === 0.0 ? endPercent : 0.0;
+            var curStep = Math.max(customSettingsObj.animationstep, 0.0);
+            var circ = Math.PI * 2;
+            var quart = Math.PI / 2;
+            var type = '';
+            var fireCallback = true;
+            var additionalAngelPI = (customSettingsObj.startdegree / 180) * Math.PI;
+
+            if ($(this).data('type') != undefined) {
+                type = $(this).data('type');
+
+                if (type == 'half') {
+                    startAngle = 2.0 * Math.PI;
+                    endAngle = 3.13;
+                    circ = Math.PI;
+                    quart = Math.PI / 0.996;
+                }
+            }
+            
+            if ($(this).data('type') != undefined) {
+                type = $(this).data('type');
+
+                if (type == 'angle') {
+                    startAngle = 2.25 * Math.PI;
+                    endAngle = 2.4;
+                    circ = 1.53 + Math.PI;
+                    quart = 0.73 + Math.PI / 0.996;
+                }
+            }
+
+            /**
+             * adds text to circle
+             *
+             * @param obj
+             * @param cssClass
+             * @param lineHeight
+             */
+            function addCircleText(obj, cssClass, lineHeight) {
+                $("<span></span>")
+                    .appendTo(obj)
+                    .addClass(cssClass)
+                    .html(text)
+                    .prepend(icon)
+                    .css({
+                        'line-height': lineHeight + 'px',
+                        'font-size': customSettingsObj.fontsize + 'px'
+                    });
+            }
+
+            /**
+             * adds info text to circle
+             *
+             * @param obj
+             * @param factor
+             */
+            function addInfoText(obj, factor) {
+                $('<span></span>')
+                    .appendTo(obj)
+                    .addClass('circle-info-half')
+                    .css(
+                        'line-height', (customSettingsObj.dimension * factor) + 'px'
+                    )
+                    .text(info);
+            }
+
+            /**
+             * checks which data attributes are defined
+             * @param obj
+             */
+            function checkDataAttributes(obj) {
+                $.each(customSettings, function (index, attribute) {
+                    if (obj.data(attribute) != undefined) {
+                        customSettingsObj[attribute] = obj.data(attribute);
+                    } else {
+                        customSettingsObj[attribute] = $(settings).attr(attribute);
+                    }
+
+                    if (attribute == 'fill' && obj.data('fill') != undefined) {
+                        fill = true;
+                    }
+                });
+            }
+
+            /**
+             * animate foreground circle
+             * @param current
+             */
+            function animate(current) {
+
+                context.clearRect(0, 0, canvas.width, canvas.height);
+
+                context.beginPath();
+                context.arc(x, y, radius, endAngle, startAngle, false);
+
+                context.lineWidth = customSettingsObj.width + 1;
+
+                context.strokeStyle = customSettingsObj.bgcolor;
+                context.stroke();
+
+                if (fill) {
+                    context.fillStyle = customSettingsObj.fill;
+                    context.fill();
+                }
+
+                context.beginPath();
+                context.arc(x, y, radius, -(quart) + additionalAngelPI, ((circ) * current) - quart + additionalAngelPI, false);
+
+                if (customSettingsObj.border == 'outline') {
+                    context.lineWidth = customSettingsObj.width + 13;
+                } else if (customSettingsObj.border == 'inline') {
+                    context.lineWidth = customSettingsObj.width - 13;
+                }
+
+                context.strokeStyle = customSettingsObj.fgcolor;
+                context.stroke();
+
+                if (curPerc < endPercent) {
+                    curPerc += curStep;
+                    requestAnimationFrame(function () {
+                        animate(Math.min(curPerc, endPercent) / 100);
+                    }, obj);
+                }
+
+                if (curPerc == endPercent && fireCallback && typeof(options) != "undefined") {
+                    if ($.isFunction(options.complete)) {
+                        options.complete();
+
+                        fireCallback = false;
+                    }
+                }
+            }
+
+            animate(curPerc / 100);
+
+        });
+    };
+}(jQuery));
+
+
+
+/*SWIPER JS*/
+var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+
+      /*Timeline*/
+      var items = document.querySelectorAll(".timeline li");
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      if(!items[i].classList.contains("in-view")){
+        items[i].classList.add("in-view");
+      }
+    } else if(items[i].classList.contains("in-view")) {
+        items[i].classList.remove("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+
+</script>
+</body>
+</html>
+
+
