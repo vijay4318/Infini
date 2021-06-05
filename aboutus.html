@@ -372,7 +372,9 @@ border-radius: 60%;
   }
 
   /*WHY US*/
-
+.why-infini{
+    overflow-x: hidden;
+}
 .why-infini-image > img:nth-child(1) {
   height: 100%;
   width: 100%;
@@ -424,6 +426,13 @@ border-radius: 60%;
   .timeline ul li:nth-of-type(even) > div {
     left: 45px;
   }
+	.timeline > div:nth-child(1) > div:nth-child(2) {
+overflow-x: hidden;
+width: 102%;
+}
+.timeline-content ul{
+    margin-left: -50px;
+}
 /*TESTIMONIAL*/
 .swiper-container {
     width: 75% !important;
@@ -586,6 +595,8 @@ border-radius: 15px;
                 <p>Ne summo dictas pertinacia nam. Illum cetero vocent ei vim, case regione signiferumque vim te.
                 </p>
             </div>
+         <div class="row timeline-content">
+             <div class="col-sm col-md"> 
         <ul>
           <li>
             <div>
@@ -655,7 +666,9 @@ border-radius: 15px;
               
             </div>
           </li>
-        </ul>           
+        </ul>  
+	</div>
+         </div>	     
     </div>
       </section>
     <section class="aboutus-testimonial pt-5">
