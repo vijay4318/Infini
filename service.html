@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google fonts link-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS and js Links-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <!--OWL JS FOR ANIMATION(animate.css)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!--Swiper js-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <title>Services</title>
+    <style>
+     :root{
+        --green: #7ad03a;
+        --red: #a00;
+        --orange: #ffba00;
+        --blue: #2ea2cc;
+        --primary: #a46497;
+        --primary-text: white;
+        --secondary: #ebe9eb;
+        --secondary-text: #515151;
+        --highlight: #77a464;
+        --highligh-text: white;
+        --content-bg: #fff;
+        --subtext: #767676;
+        --primary-font: 'Poppins', sans-serif;
+        --body-text:#3B3663;
+     }
+    /***************OUR SERVICE GRID**************/
+    .pg-service-list{
+        position: relative;
+        padding-top: 80px;
+    }
+
+    .service-list-headings{
+        position: relative;
+        padding: auto;
+        width: 80%;
+        text-align: center;
+        left: 10%;
+    }
+    
+    .service-list-headings h3{
+    font-family: var(--secondary-font);
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 700;
+    color: #050748;
+    padding-top: 10px;
+  }
+  .service-list-headings p{
+    font-family: var(--primary-font);
+    font-size: 17px;
+    color: #6a6a8e;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  .service-catergory{
+    width: 20%;
+    display: inline-block;
+    float: left;
+    position: relative;
+    justify-content: space-evenly;
+    margin: 20px 27px;
+    text-align: center;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .service-catergory::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    transition: all .4s ease;
+    transform: translateY(100%);
+    background-image: -webkit-linear-gradient(-116.565051177078deg, rgba(252,224,15,1) 0, rgba(255,110,0,1) 100%);
+    background-image: -moz-linear-gradient(206.565051177078deg, rgba(252,224,15,1) 0, rgba(255,110,0,1) 100%);
+    background-image: linear-gradient(206.565051177078deg, rgba(252,224,15,1) 0, rgba(255,110,0,1) 100%);
+    background-position: 50% 50%;
+}
+
+    .category-image img{
+        height: 120px;
+        width: 120px;
+        padding-top: 10px;
+        transform: translateY(80px);
+        transition: 0.3s ease-in;
+    } 
+    .category-description {
+        position: relative;
+    padding: 15px 20px;
+    
+   
+
+    }
+    .service-catergory:hover::after{
+        transform: translateY(00%);
+    }
+    
+    .service-catergory:hover .category-image img{
+        transform: translateY(0px);
+    }
+    .service-catergory:hover .category-description h3, .service-catergory:hover .category-description p{
+    transform: translateY(0px);
+    color: white;
+}
+    .category-description h3{
+        font-family: var(--secondary-font);
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #050748;
+    padding-top: 10px; 
+    transform: translateY(80px);
+    transition: 0.3s ease-in;
+    }
+    .category-description p{
+        font-family: var(--primary-font);
+    font-size: 16px;
+    color: #6a6a8e;
+    line-height: 24px;
+    font-weight: 400;
+    transform: translateY(129px);
+    transition: 0.5s ease-out;
+    }
+
+
+    /*PORTFOLIO */
+    .infini-portfolio{
+        padding-bottom: 500px;
+        position: relative;
+    }
+    .portfolio-details{
+        width: 25%;
+    display: inline-block;
+    float: left;
+    position: relative;
+    padding-bottom: 40px;
+    overflow: hidden;
+    
+    }
+    .portfolio-image{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    width: 300px;
+    
+    }
+    .portfolio-image:hover::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-image: -webkit-linear-gradient(90deg, rgba(102,102,102,0.8) 0, rgba(255,255,255,0) 45%, rgba(255,255,255,0) 100%);
+        background-image: -moz-linear-gradient(0deg, rgba(102,102,102,0.8) 0, rgba(255,255,255,0) 45%, rgba(255,255,255,0) 100%);
+        background-image: linear-gradient(0deg, rgba(102,102,102,0.8) 0, rgba(255,255,255,0) 45%, rgba(255,255,255,0) 100%);
+    }
+    .portfolio-image img{
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+    }
+    .portfolio-image h3{
+        font-family: var(--secondary-font);
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #050748;
+    padding-top: 10px; 
+    text-align: center;
+    position: absolute;
+    bottom: 4px;
+    left: 30%;
+    opacity: 0;
+    transition: 0.3s ease-in;
+    z-index: 999;
+    }
+    .portfolio-details:hover .portfolio-image h3{
+    bottom: 10px;
+    opacity: 1;
+    color: rgb(255, 0, 0) !important;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+color: white;
+background-image: linear-gradient(96deg, #f0ac0e 0%, #ff7426 100%);
+font-size: 18px;
+font-weight: 500;
+border-radius: 10px;
+}
+/**************MOBILE STYLE*****************/
+    @media screen and (max-width:764px){
+    /*SERVIVES*****/
+    .service-catergory {
+
+width: 88%;
+}
+
+        /******PORTFOLIO******/
+        .portfolio-details {
+
+width: 49%;
+padding-bottom: 20px;
+}
+.portfolio-image img {
+height: 150px;
+width: 150px;
+overflow: hidden;
+}
+.portfolio-image:hover::after {
+width: 89%;
+}
+.portfolio-image h3 {
+font-size: 22px;
+left: 10% !important;
+}
+    }
+    </style>
+</head>
+<body>
+ <section class="pg-service-list">
+  <div class="container">
+      <div class="row justify-content-center text-center">
+          <div class="col-sm col-md">
+              <div class="service-list-headings">
+                  <h3>OUR SERVICES</h3>
+                  <p>Ea pro tibique comprehensam, sed ea verear numquam molestie. Nam te omittam comprehensam. Ne nam 
+                    nonumy putent fuisset, reque fabulas usu ne.</p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm col-md">
+              <div class="service-category-grid">
+                  <div class="service-catergory">
+                      <div class="category-image">
+                          <img src="images/elearning.svg" alt="">
+                      </div>
+                      <div class="category-description">
+                          <h3>Digital marketing and SEO optimization</h3>
+                          <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                      </div>
+                  </div>
+                  <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+                <div class="service-catergory">
+                    <div class="category-image">
+                        <img src="images/elearning.svg" alt="">
+                    </div>
+                    <div class="category-description">
+                        <h3>Digital marketing and SEO optimization</h3>
+                        <p>Maecenas elementum sapien in metus placerat finibus. Lorem ipsum dolor sit amet, vix an natum.</p>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+ </section>
+<section class="infini-portfolio">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-sm col-md">
+                <div class="portfolio-intro">
+                    <span>Sneak Peak</span>
+                    <h3>Our Commitments</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row d-block">
+            <div class="col-sm col-md">
+                <div class="categories-tabs">
+                    <ul class="nav nav-pills mb-3 justify-content-center text-center" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">Home</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-designing-tab" data-bs-toggle="pill" data-bs-target="#pills-designing" type="button" role="tab" aria-controls="pills-designing" aria-selected="false">Profile</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-web-development-tab" data-bs-toggle="pill" data-bs-target="#pills-web-development" type="button" role="tab" aria-controls="pills-web-development" aria-selected="false">Contact</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                            <div class="all-portfolios">
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-designing" role="tabpanel" aria-labelledby="pills-designing-tab">
+                            <div class="all-portfolios">
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/image-6.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/image-6.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/image-6.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/image-6.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/image-6.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/image-6.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/image-6.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/image-6.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-web-development" role="tabpanel" aria-labelledby="pills-web-development-tab">
+                            <div class="all-portfolios">
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="portfolio-details">
+                                    <a href="#">
+                                        <div class="portfolio-image">
+                                            <img src="images/Twice-Profit-Than-Before-540x540.jpg" alt="">
+                                            <h3>Heading</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+ <!--Swiper js-->
+ <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+ <!--Jquery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</body>
+</html>
